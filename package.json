@@ -1,0 +1,13 @@
+{
+  "name": "enye",
+  "version": "1.0.0",
+  "description": "Enye backend challenge take-home",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Somoye Ayotunde <somoye.ayotunde@gmail.com>",
+  "license": "ISC"
+}
