@@ -12,3 +12,8 @@ dotenv.config();
 
 // Instantiate the server
 const app = express();
+
+// Add middlewares
+app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
