@@ -5,7 +5,18 @@ const ExchangeRateApi = 'https://api.exchangeratesapi.io/latest';
 export const GetExchangeRateController = async (req, res) => {
   try {
     const { base, currency } = req.query;
-    
+    if (!base)
+      return res.status(422).json({
+        status: 'error',
+        message: 'base query parameter is required',
+      });
+
+    if (!currency)
+      return res.status(422).json({
+        status: 'error',
+        message: 'currency query parameter is required',
+      });
+
     const response = await axios(
       `${ExchangeRateApi}?base=${base}&symbols=${currency}`
     );
