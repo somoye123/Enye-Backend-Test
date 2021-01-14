@@ -20,3 +20,9 @@ app.use(express.json());
 
 // Routes Middleware
 app.use('/api', RateRoute);
+
+// Start the server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT).on('listening', () => {
+  console.log(`💘 app is listening on ${PORT} 🚀`);
+});
