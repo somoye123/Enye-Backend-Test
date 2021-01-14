@@ -15,7 +15,12 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node server.js",
+    "clean": "rm -rf build && mkdir build",
+    "start": "node server.js",
+    "build": "npm run clean && npm run build-server",
+    "build-server": "babel -d ./build ./src -s"
   },
   "author": "Somoye Ayotunde <somoye.ayotunde@gmail.com>",
   "license": "ISC"
